@@ -1,7 +1,7 @@
 
 function Footer() {
   return (
-    <footer className="flex w-full border-t border-white/10 bg-black/20 backdrop-blue-lg"> 
+    <footer className="flex w-full border-t border-black/10 dark:border-white/10 backdrop-blue-lg"> 
       <div className="max-w-275 mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500 dark:text-white/60 w-full">
         <span className="font-semibold text-neutral-700 dark:text-white/80">
           Movie<span className="text-brand-500">Find</span>

@@ -55,6 +55,8 @@ function App() {
       });
   }, [debouncedQuery]);
 
+  console.log(movies)
+
   function toggleFavorite(movie) {
     const alreadyFavorite = favorites.some(
       (favorite) => favorite.imdbID === movie.imdbID,
@@ -69,7 +71,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen w-full font-sans text-neutral-100 bg-linear-to-br from-brand-950 via-neutral-900 to-black">
+    <div className="flex flex-col min-h-screen w-full font-sans text-neutral-900 dark:text-neutral-100 bg-neutral -50 dark:bg-linear-to-br dark:from-brand-950 dark:via-neutral-900 to-black">
       <NavBar tab={tab} setTab={setTab} dark={dark} setDark={setDark}/>
       <main className="flex-1">
         <div className="max-w-295 mx-auto px-6 py-12">
@@ -93,7 +95,7 @@ function App() {
           ) : error ? (
             <p className="text-center text-white/75 text-lg mt-8">{error}</p>
           ) : (
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
               {movies.map((movie) => (
                 <MovieCard
                   key={movie.imdbID}
