@@ -50,7 +50,7 @@ function NavBar({ tab, setTab, dark, setDark }) {
             {dark ? "☾" : "☀"}
           </button>
         </nav>
-        <button className="md:hidden w-10 h-10 items-center justify-center rounded-full border borer-white/10 bg-white/10 text-white cursor-pointer" onClick={() => darkMode()}>
+        <button className="md:hidden w-10 h-10 items-center justify-center rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/10 text-neutral-900 dark:text-white cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? "✕" : "☰"}
         </button>
       </div>
@@ -60,7 +60,7 @@ function NavBar({ tab, setTab, dark, setDark }) {
             className={`text-left py-2 text-sm font-semibold transition-colors cursor-pointer ${
             tab === "all"
               ? "text-brand-500"
-              : "text-white/70 hover:text-white"
+              : "text-neutral-500 dark:text-white/70 dark:hover:text-white"
             }`}
             onClick={() => selectTab("all")}
           >
@@ -70,13 +70,13 @@ function NavBar({ tab, setTab, dark, setDark }) {
             className={`text-left py-2 text-sm font-semibold transition-colors cursor-pointer ${
             tab === "favorites"
               ? "text-brand-500"
-              : "text-white/70 hover:text-white"
+              : "text-neutral-500 dark:text-white/70 dark:hover:text-white"
             }`}
             onClick={() => selectTab("favorites")}
           >
             Favorites
           </button>
-          <button className="text-left text-sm font-semibold py-2 text-neutral-500 dark:text-white/70" onClick={() => setDark(!dark)}>
+          <button className="text-left text-sm font-semibold py-2 text-neutral-500 dark:text-white/70" onClick={() => darkMode()}>
             {dark ? "☾ Dark mode" : "☀ Light mode"}
           </button>
         </div>
