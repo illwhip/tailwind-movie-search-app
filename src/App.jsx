@@ -16,7 +16,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
   const [tab, setTab] = useState("all");
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(true)
 
   useEffect(() => {
     let ignore = false;
@@ -71,7 +71,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen w-full font-sans text-neutral-900 dark:text-neutral-100 bg-neutral -50 dark:bg-linear-to-br dark:from-brand-950 dark:via-neutral-900 to-black">
+    <div className="flex flex-col min-h-screen w-full font-sans text-neutral-900 dark:text-neutral-100 bg-neutral-50 dark:bg-linear-to-br dark:from-brand-950 dark:via-neutral-900 to-black">
       <NavBar tab={tab} setTab={setTab} dark={dark} setDark={setDark}/>
       <main className="flex-1">
         <div className="max-w-295 mx-auto px-6 py-12">

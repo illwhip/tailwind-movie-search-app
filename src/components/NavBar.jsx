@@ -10,17 +10,13 @@ function NavBar({ tab, setTab, dark, setDark }) {
   }
 
   function darkMode() {
-    if (!darken.classList.contains('dark')) {
-      darken.classList.add('dark')
-    }
-    if (darken.classList.contains('dark')) {
-      darken.classList.remove('dark')
-    }
+    darken.classList.toggle('dark')
     setDark(!dark)
   }
+    
 
   return (
-    <header className="w-full border-b border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blue-lg">
+    <header className="w-full border-b border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blur-lg">
       <div className="max-w-275 mx-auto px-6 py-4 flex items-center justify-between">
         <span className="text-xl font-bold tracking-tight test_white">
           Movie<span className="text-brand-500">Find</span>
